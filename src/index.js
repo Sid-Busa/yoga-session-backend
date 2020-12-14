@@ -6,11 +6,11 @@ import userRouter from "./routers/user.js";
 import Timing from "./routers/timing.js";
 
 // configure application
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const app = express();
 app.use(express.json());
 let corsOption = {
-    origin: 'http://localhost:3000',
+    origin: '*',
     optionsSuccessStatus: 200 
 }
 app.use(cors(corsOption))
