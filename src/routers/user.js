@@ -5,12 +5,12 @@ const router = new express.Router();
 
 // Register user route
 router.post("/", async (req, res) => {
-  
+    console.log("request", req.body)
   // Find if user is already exist or not 
   try {
     const checkUserisExist = await User.findOne({ email: req.body.email });
     if (checkUserisExist) {
-      return res.status(400).send({ error: "email is already exist" });
+      return res.status(400).send({ status:false, error: "email is already exist" });
     }
   } catch (e) {
     console.log(e);

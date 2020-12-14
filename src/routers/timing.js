@@ -5,7 +5,6 @@ const router = new express.Router();
 
 // Add data for yoga session route
 router.post("/", async (req, res) => {
-  console.log("request date", req.body);
   const timing = new Timing(req.body);
   try {
     await timing.save();
