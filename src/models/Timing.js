@@ -30,6 +30,7 @@ const timeSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
 const Timing = mongoose.model("Timing", timeSchema);
 
 export default Timing;
