@@ -9,7 +9,11 @@ import Timing from "./routers/timing.js";
 const port = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
-app.use(cors())
+let corsOption = {
+    origin: 'http://localhost:8080',
+    optionsSuccessStatus: 200 
+}
+app.use(cors(corsOption))
 
 // configure routers
 app.use("/user", userRouter);
