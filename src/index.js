@@ -1,7 +1,6 @@
 // import all necessary dependancy
-import dotenv from "dotenv";
-dotenv.config();
 import express from "express";
+import cors  from "cors";
 import "./database/db.js";
 import userRouter from "./routers/user.js";
 import Timing from "./routers/timing.js";
@@ -10,6 +9,7 @@ import Timing from "./routers/timing.js";
 const port = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 // configure routers
 app.use("/user", userRouter);
