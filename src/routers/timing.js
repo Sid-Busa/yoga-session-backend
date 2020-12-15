@@ -14,6 +14,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Add data for yoga session event based on year and month route
 router.get('/:year/:month', async (req, res) => {
     const year = parseInt(req.params.year)
     const month = parseInt(req.params.month)
