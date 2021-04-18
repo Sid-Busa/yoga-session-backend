@@ -9,6 +9,7 @@ import Timing from "./routers/timing.js";
 const port = process.env.PORT || 3001;
 const app = express();
 app.use(express.json());
+//core settings
 let corsOption = {
     origin: '*',
     optionsSuccessStatus: 200 
